@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/' => 'api_prospects#index'
+  get '/packages' => 'api_prospects#packages'
+  post '/packages_city' => 'api_prospects#packagesCity'
 end
