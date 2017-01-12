@@ -1,6 +1,8 @@
 require 'httparty'
 
 class ApiProspectsController < ApplicationController
+  before_action :authenticate!
+  
   def index
     @prospects = get_response('http://tuskermarvel.com/prospects.json')
     render json: @prospects
